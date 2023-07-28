@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack the children of body vertically */
+    justify-content: center; /* Vertically center the children */
+    align-items: center; /* Horizontally center the children */
+    height: 100vh; /* Take the full viewport height */
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.countdown-wrapper {
+    margin: 30px;
+    display: flex;
+    flex-direction: column; /* Stack the time boxes vertically for mobile screens */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 3px solid #FFFFFF;
+    padding: 30px 50px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px; /* Add a bit of space between the countdown and description */
+}
+
+.time-box {
+    padding: 20px;
+    background-color: #272727;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    text-align: center;
+    width: 60%; /* set to a percentage so it adjusts to screen size */
+}
+
+.event-description {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Media Query for screens larger than 600px */
+@media screen and (min-width: 600px) {
+    .countdown-wrapper {
+        flex-direction: row; /* Display time boxes horizontally for larger screens */
+        justify-content: center;
+        gap: 30px; /* Increase the gap a bit for larger screens */
+    }
+
+    .time-box {
+        width: auto; /* Reset the width */
+        padding: 20px; /* Increase the padding for larger screens */
+    }
+}
